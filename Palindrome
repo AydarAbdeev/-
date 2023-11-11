@@ -1,0 +1,15 @@
+
+public class Main {
+    public static void main(String[] args) {
+        String phrase ="<< Маша шла %>>!%№_сосала сушку 221 <<(<<_Э>>";
+        phrase = phrase.replaceAll("[^А-Яа-яA-Za-z0-9]", "");
+        StringBuilder builder = new StringBuilder(phrase);
+        builder.reverse();
+        String result = builder.toString();
+        if (phrase.equalsIgnoreCase(result)) {
+            System.out.println("Строка является полиндромом");
+        } else {
+            System.out.println("Строка не является полиндромом");
+        }
+    }
+}
